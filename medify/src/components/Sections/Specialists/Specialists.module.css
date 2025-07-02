@@ -1,0 +1,21 @@
+.customSwiper {
+    padding-bottom: 150px; /* leave room for pagination dots */
+    position: relative;
+  }
+  
+  .customSwiper :global(.swiper-pagination) {
+    position: absolute;
+    bottom: 55px; /* place it just below the swiper */
+    width: 100%;
+    text-align: center;
+  }
+  
+  .customSwiper :global(.swiper-pagination-bullet) {
+    background-color: #bcd8e9;
+    opacity: 1;
+    padding: 10px;
+  }
+  
+  .customSwiper :global(.swiper-pagination-bullet-active) {
+    background-color: #2aa7ff;
+  }

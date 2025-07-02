@@ -40,7 +40,7 @@ export default function Footer() {
       >
         <Grid
           container
-          spacing={{ xs: 5, md: 20, lg: 40, xl: 60 }}
+          spacing={{ xs: 5, md: 10, lg: 30, xl: 50 }}
           sx={{
             flexDirection: {
               xs: "column",

@@ -16,7 +16,7 @@ export default function Hero() {
           alignItems: "center",
           flexDirection: { xs: "column", lg: "row" },
           gap: { xs: 5, lg: 0 },
-          pb: "30%",
+          pb: "4",
         }}
         disableGutters
         maxWidth={false}
@@ -28,9 +28,9 @@ export default function Hero() {
             </Typography>
             <Typography
               variant="h2"
-              fontWeight={900}
+              fontWeight={700}
               letterSpacing={2}
-              lineHeight={1.3}
+              lineHeight={1.2}
               fontStyle="bold"
             >
               Medical <span style={{ color: "#2AA7FF" }}>Centers</span>

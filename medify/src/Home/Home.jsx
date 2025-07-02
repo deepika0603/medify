@@ -6,6 +6,13 @@ import SearchHospital from "../components/SearchHospital/SearchHospital";
 import { Box } from "@mui/material";
 import IconLayout from "../components/IconLayout/IconLayout";
 import Specialization from "../components/Sections/Specialization/Specialization";
+import Specialists from "../components/Sections/Specialists/Specialists";
+import FAQs from "../components/Sections/FAQs/FAQ";
+import Blogs from "../components/Sections/Blogs/Blogs";
+import DownloadApp from "../components/Sections/DownloadApp/DownloadApp";
+import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
+import OurFamilies from "../components/Sections/OurFamilies/OurFamilies";
+
 export default function Home() {
   return (
     <div>
@@ -41,6 +48,12 @@ export default function Home() {
       </Box>
       <Offers />
       <Specialization />
+      <Specialists />
+      <PatientCaring />
+      <Blogs/>
+      <OurFamilies />
+      <FAQs />
+      <DownloadApp />
       <Footer />
     </div>
   );

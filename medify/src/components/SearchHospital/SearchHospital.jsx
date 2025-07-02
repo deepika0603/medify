@@ -84,7 +84,7 @@ import {
               <Select
                 fullWidth
                 inputProps={{ "aria-label": "Without label" }}
-                id="demo-simple-select"
+                id="state"
                 displayEmpty
                 value={selectedState}
                 renderValue={(selectedState) => {
@@ -115,7 +115,7 @@ import {
               <Select
                 fullWidth
                 inputProps={{ "aria-label": "Without label" }}
-                id="demo-simple-select"
+                id="city"
                 displayEmpty
                 value={selectedCity}
                 renderValue={(selectedCity) => {
@@ -150,6 +150,7 @@ import {
                 p: 1.5,
                 boxShadow: "none",
                 borderRadius: "8px",
+                px: 2,
               }}
             >
               <SearchIcon sx={{ mr: 1 }} />
