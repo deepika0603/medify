@@ -140,13 +140,13 @@ const MySwiper = ({
                   <Typography
                     variant="h6"
                     fontSize={18}
-                    fontWeight={selected && 650}
+                    fontWeight={selected && 600}
                   >
                     {ind === 1 && "Tomorrow"} {ind >= 2 && date}
                   </Typography>
                 )}
 
-                <Typography variant="h6" color="#01A400" fontSize={16}>
+                <Typography variant="h6" color="#01A400" fontSize={15}>
 
                   11 Slots Available
                 </Typography>
