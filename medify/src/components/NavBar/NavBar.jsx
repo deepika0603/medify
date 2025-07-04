@@ -58,9 +58,11 @@ export default function NavBar() {
             <Link>Software for Provider</Link>
             <Link>Facilities</Link>
             <Link to="/my-bookings">
-              <Button variant="contained" disableElevation>
+            <Button variant="contained">
+              <h1 style={{ fontSize: "16px", margin: "0", fontWeight: "500" }}>
                 My Bookings
-              </Button>
+              </h1>
+            </Button>
             </Link>
 
             {isMobile && (
