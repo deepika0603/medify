@@ -143,6 +143,7 @@ import {
               </Select>
             </FormControl>
             <Button
+              id="searchBtn" 
               variant="contained"
               type="submit"
               sx={{
