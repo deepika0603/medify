@@ -12,6 +12,8 @@ import { GoVerified } from "react-icons/go";
 import MyContext from "./MyContext";
 import BookingModal from "../components/BookingModal/BookingModal";
 import axios from "axios";
+import AutohideSnackbar from "../components/AutohideSnackbar/AutohideSnackbar";
+
 
 export default function Search() {
   const [params, setParams] = useSearchParams();
@@ -23,6 +25,7 @@ export default function Search() {
   const [hospitalList, setHospitalList] = useState([]);
   // const [bookingEmail, setBookingEmail] = useState("");
   const [bookingID, setBookingID] = useState(null);
+  const [openSnackbar, setSnackbar] = useState(false);
 
 
   const timing = useMemo(
@@ -139,14 +142,15 @@ export default function Search() {
           sx={{
             px: { xs: 5, md: 15 },
             pt: 20,
-            background:
-              "linear-gradient(to right, #E7F0FF 0%, #E8F1FF 47%, #E8F1FF 100%)",
+            background:"#f3f6fa",
+              
             pb: 10,
           }}
         >
           <Stack spacing={1} pb={5}>
             <Typography variant="h1" fontSize={28} fontWeight={500}>
-            {hospitalList.length} medical centers available in {selectedCity.toLowerCase()}
+            {hospitalList.length} medical centers available in{" "}
+              {selectedCity.toLowerCase()}
             </Typography>
             <Typography
               color="#787887"
@@ -224,7 +228,9 @@ export default function Search() {
         hospitalList={hospitalList}
         bookingID={bookingID}
         persistBookings={persistBookings}
+        setSnackbar={setSnackbar}
         />
+        <AutohideSnackbar open={openSnackbar} setOpen={setSnackbar} />
       </div>
     </MyContext.Provider>
   );

@@ -4,6 +4,7 @@ import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import Calender from "../Calender/Calender";
 import { useState } from "react";
 
+import moment from "moment";
 export default function Card({ type, hospital }) {
     const [open, setOpen] = useState(false);
 
@@ -23,9 +24,11 @@ export default function Card({ type, hospital }) {
               />
             </Grid>
           </Grid>
+          {type === "Hospital Card" && (
           <Box pt={3} display={open ? "block" : "none"}>
             <Calender name={hospital["Provider ID"]} />
           </Box>
+          )}
         </Box>
       );
     }
@@ -63,9 +66,9 @@ export default function Card({ type, hospital }) {
                       fontSize="16px"
                       color="#2AA7FF"
                       fontWeight={400}
-                      width="62px"
+                      width="70px"
                     >
-                      11:30 PM
+                      {hospital["bookingTime"]}
                     </Typography>
                   </Button>
                   <Button
@@ -78,9 +81,9 @@ export default function Card({ type, hospital }) {
                       color="#007100"
                       fontWeight={400}
                       width="100px"
-                      fontWeight={500}
+                      //fontWeight={500}
                     >
-                      20 April 2025
+                      {moment(new Date(hospital["bookingDate"])).format("ddd, DD MMM")}
                     </Typography>
                   </Button>
                 </Box>

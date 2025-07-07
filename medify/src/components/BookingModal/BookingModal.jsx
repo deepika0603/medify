@@ -16,7 +16,8 @@ import {
     selectedTime,
     hospitalList,
     bookingID,
-    persistBookings
+    persistBookings,
+    setSnackbar,
   }) {
     const style = {
       position: "absolute",
@@ -47,6 +48,7 @@ import {
       // setBookingEmail(email);
       persistBookings(bookingID, hospitalList, email, selectedDate, selectedTime);
       setOpen(!open);
+      setSnackbar(true);
     };
   
     return (
