@@ -48,8 +48,8 @@ const router = createBrowserRouter([
     Component: App,
     children: [
       { path: "/", Component: Home },
-      { path: "search", Component: Search },
-      { path: "my-bookings", Component: MyBookings },
+      { path: "/search", Component: Search },
+      { path: "/my-bookings", Component: MyBookings },
     ],
   },
 ]);
