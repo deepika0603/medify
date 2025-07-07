@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar/NavBar";
 import SearchBar from "../components/SearchBar/SearchBar";
-import { Box, Stack, Grid, Container } from "@mui/material";
+import { Box, Stack, Grid, Container, Typography  } from "@mui/material";
 import DownloadApp from "../components/Sections/DownloadApp/DownloadApp";
 import Footer from "../components/Footer/Footer";
 import { useState, useEffect, useCallback } from "react";
@@ -104,13 +104,33 @@ export default function MyBookings() {
             }}
           >
             <Stack width={{ sm: "100%", md: "100%", xl: "66%" }} spacing={3}>
-              {bookings.map((booking, ind) => (
+              {/* {bookings.map((booking, ind) => (
                 <HospitalCard
                   type="Booking Card"
                   hospital={booking}
                   key={booking["Provider ID"] + ind}
                 />
-              ))}
+              ))} */}
+              {!bookings.length ? (
+                <Box
+                  backgroundColor="white"
+                  height="fit-content"
+                  p={3}
+                  borderRadius={6}
+                >
+                  <Typography variant="h4" fontWeight={500}>
+                    No Bookings Found!
+                  </Typography>
+                </Box>
+              ) : (
+                bookings.map((booking, ind) => (
+                  <HospitalCard
+                    type="Booking Card"
+                    hospital={booking}
+                    key={booking["Provider ID"] + ind}
+                  />
+                ))
+              )}
             </Stack>
             <Box width={{ sm: "100%", xl: "30%" }} mb={4}>
               <Box component="img" src={Banner} alt="Banner" width="100%" />
